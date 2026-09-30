@@ -1,16 +1,170 @@
 path: /orcamento/
 title: Pedir orçamento | Insiel
-description: Peça um orçamento de segurança eletrônica, energia solar, equipamentos ou controle semafórico.
+description: Peça um orçamento de segurança eletrônica, energia solar, equipamentos e software ou controle semafórico. Em quatro passos rápidos, pelo celular.
 divisao: seguranca
-priority: 0.6
+nav: orcamento
+priority: 0.9
 ---
-<section class="hero hero--short">
-  <canvas class="hero__net" aria-hidden="true"></canvas>
-  <div class="wrap"><div class="hero__in">
-    <p class="kicker">Em construção · etapa 2</p>
-    <h1>Peça seu orçamento.</h1>
-    <p class="lead">Peça um orçamento de segurança eletrônica, energia solar, equipamentos ou controle semafórico.</p>
-    <div class="btn-row"><a class="btn btn--red" href="{{rel}}orcamento/">Falar no WhatsApp</a><a class="btn btn--outline" data-wa="seguranca" href="#" target="_blank" rel="noopener">{{icon:whatsapp}} WhatsApp</a></div>
-  </div></div>
+<section class="hero hero--light hero--short" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="hero__in" style="padding-bottom:0">
+      <p class="kicker">Orçamento</p>
+      <h1>Peça seu orçamento em quatro passos.</h1>
+      <p class="lead">Leva menos de dois minutos. Retornamos pelo WhatsApp em horário comercial.</p>
+    </div>
+  </div>
 </section>
-<section class="sec construcao"><div class="wrap"><p class="lead" style="margin-inline:auto">Esta página recebe o conteúdo completo na próxima etapa do projeto.</p></div></section>
+
+<section class="sec sec--off" style="padding-top:2rem">
+  <div class="wrap" style="max-width:820px">
+    <form class="form orc" id="orc-form" novalidate>
+      <div class="orc__prog" aria-hidden="true"><div class="orc__bar" id="orc-bar" style="width:25%"></div></div>
+      <p class="orc__step-label" id="orc-label">Passo 1 de 4</p>
+      <div class="hp" aria-hidden="true"><label>Não preencha<input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
+
+      <fieldset class="orc__step" data-step="1">
+        <legend><h2>O que você precisa?</h2></legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="divisao" value="seguranca" required><span>{{icon:shield}}<strong>Segurança eletrônica</strong><small>Monitoramento, alarmes, câmeras, cerca, acesso</small></span></label>
+          <label class="opt"><input type="radio" name="divisao" value="solar"><span>{{icon:sun}}<strong>Energia solar</strong><small>Usina para casa, comércio ou indústria</small></span></label>
+          <label class="opt"><input type="radio" name="divisao" value="tecnologia"><span>{{icon:cpu}}<strong>Equipamentos / software</strong><small>Tornozeleira eletrônica, software de monitoramento</small></span></label>
+          <label class="opt"><input type="radio" name="divisao" value="transito"><span>{{icon:traffic}}<strong>Trânsito</strong><small>Controladores e semáforos em LED</small></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="orc__step" data-step="2" hidden>
+        <legend><h2>Para quem é?</h2></legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="perfil" value="residencia" required><span>{{icon:home}}<strong>Residência</strong></span></label>
+          <label class="opt"><input type="radio" name="perfil" value="empresa"><span>{{icon:building}}<strong>Empresa</strong></span></label>
+          <label class="opt"><input type="radio" name="perfil" value="industria"><span>{{icon:factory}}<strong>Indústria</strong></span></label>
+          <label class="opt"><input type="radio" name="perfil" value="orgao_publico"><span>{{icon:landmark}}<strong>Órgão público</strong></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="orc__step" data-step="3" hidden>
+        <legend><h2>Alguns detalhes</h2></legend>
+        <div class="orc__div" data-div="seguranca">
+          <p class="f-label">Serviços de interesse</p>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="servicos" value="monitoramento"><span>Monitoramento 24h</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="alarme"><span>Alarme</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="cftv"><span>Câmeras</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="cerca"><span>Cerca elétrica</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="acesso"><span>Controle de acesso</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="incendio"><span>Alarme de incêndio</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="automacao"><span>Automação</span></label>
+          </div>
+          <p class="f-label mt-2">Já possui algum sistema instalado?</p>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="sistema_existente" value="nao"><span>Não</span></label>
+            <label class="chip"><input type="radio" name="sistema_existente" value="sim_insiel"><span>Sim, da Insiel</span></label>
+            <label class="chip"><input type="radio" name="sistema_existente" value="sim_outra"><span>Sim, de outra empresa</span></label>
+          </div>
+        </div>
+        <div class="orc__div" data-div="solar" hidden>
+          <div class="f-grid f-grid--2">
+            <div class="f"><label for="o-conta">Valor médio da conta de luz</label>
+              <select id="o-conta" name="conta_luz"><option value="">Selecione</option><option>até R$ 300</option><option>R$ 300 a R$ 600</option><option>R$ 600 a R$ 1.500</option><option>R$ 1.500 a R$ 5.000</option><option>acima de R$ 5.000</option></select></div>
+            <div class="f"><label for="o-lig">Tipo de ligação</label>
+              <select id="o-lig" name="tipo_ligacao"><option value="nao_sei">Não sei</option><option value="monofasica">Monofásica</option><option value="bifasica">Bifásica</option><option value="trifasica">Trifásica</option></select></div>
+          </div>
+        </div>
+        <div class="orc__div" data-div="tecnologia" hidden>
+          <div class="f-grid f-grid--2">
+            <div class="f"><label for="o-org">Órgão ou empresa</label><input id="o-org" name="orgao" type="text"></div>
+            <div class="f"><label for="o-cargo">Cargo</label><input id="o-cargo" name="cargo" type="text"></div>
+            <div class="f f--full"><label for="o-nec">Necessidade</label><textarea id="o-nec" name="necessidade"></textarea></div>
+          </div>
+        </div>
+        <div class="orc__div" data-div="transito" hidden>
+          <div class="f-grid f-grid--2">
+            <div class="f"><label for="o-org2">Órgão</label><input id="o-org2" name="orgao_transito" type="text" placeholder="Prefeitura, STTP…"></div>
+            <div class="f"><label for="o-cargo2">Cargo</label><input id="o-cargo2" name="cargo_transito" type="text"></div>
+            <div class="f f--full"><label for="o-nec2">Necessidade</label><textarea id="o-nec2" name="necessidade_transito" placeholder="Ex.: modernizar 12 cruzamentos…"></textarea></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="orc__step" data-step="4" hidden>
+        <legend><h2>Como falamos com você?</h2></legend>
+        <div class="f-grid f-grid--2">
+          <div class="f f--full"><label for="o-nome">Seu nome</label><input id="o-nome" name="nome" type="text" required autocomplete="name"></div>
+          <div class="f"><label for="o-wa">WhatsApp (com DDD)</label><input id="o-wa" name="whatsapp" type="tel" inputmode="tel" required autocomplete="tel" placeholder="(83) 9 9999-9999"></div>
+          <div class="f"><label for="o-email">E-mail (opcional)</label><input id="o-email" name="email" type="email" autocomplete="email"></div>
+          <div class="f f--full"><label for="o-cid">Cidade</label><input id="o-cid" name="cidade" type="text" required autocomplete="address-level2"></div>
+          <div class="f f--full"><label class="consent"><input type="checkbox" name="consentimento_lgpd" required><span>Autorizo a Insiel a usar meus dados para retornar este pedido de orçamento, conforme a <a href="{{rel}}politica-de-privacidade/">política de privacidade</a>.</span></label></div>
+        </div>
+      </fieldset>
+
+      <div class="orc__nav">
+        <button class="btn btn--outline" type="button" id="orc-prev" hidden>Voltar</button>
+        <button class="btn btn--red" type="button" id="orc-next">Continuar {{icon:arrow-right}}</button>
+        <button class="btn btn--red" type="submit" id="orc-send" hidden>Enviar pedido</button>
+      </div>
+      <div class="form__msg" role="status" aria-live="polite"></div>
+    </form>
+
+    <div class="form orc__done" id="orc-done" hidden>
+      <span class="ico" style="background:#E6F5EC;color:#155D33">{{icon:check}}</span>
+      <h2>Pedido recebido!</h2>
+      <p class="lead">Obrigado, <span id="orc-done-nome"></span>. Vamos retornar pelo WhatsApp em horário comercial. Se preferir, fale agora:</p>
+      <a class="btn btn--wa" id="orc-done-wa" href="#" target="_blank" rel="noopener">{{icon:whatsapp}} Falar agora no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.getElementById('orc-form'); if (!form) return;
+  var steps = form.querySelectorAll('.orc__step'), cur = 1, total = steps.length;
+  var bar = document.getElementById('orc-bar'), label = document.getElementById('orc-label');
+  var prev = document.getElementById('orc-prev'), next = document.getElementById('orc-next'), send = document.getElementById('orc-send'), msg = form.querySelector('.form__msg');
+  var nomesDiv = { seguranca: 'segurança eletrônica', solar: 'energia solar', tecnologia: 'equipamentos e software', transito: 'controle semafórico' };
+  function divisao() { var r = form.querySelector('input[name="divisao"]:checked'); return r ? r.value : ''; }
+  function show(n) {
+    cur = n; steps.forEach(function (s) { s.hidden = parseInt(s.getAttribute('data-step'), 10) !== n; });
+    bar.style.width = (n / total * 100) + '%'; label.textContent = 'Passo ' + n + ' de ' + total;
+    prev.hidden = n === 1; next.hidden = n === total; send.hidden = n !== total; msg.className = 'form__msg'; msg.textContent = '';
+    if (n === 3) { var d = divisao(); form.querySelectorAll('.orc__div').forEach(function (b) { b.hidden = b.getAttribute('data-div') !== d; }); }
+    document.body.setAttribute('data-divisao', divisao() || 'seguranca');
+    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  function valid(n) {
+    if (n === 1 && !divisao()) return 'Escolha uma opção para continuar.';
+    if (n === 2 && !form.querySelector('input[name="perfil"]:checked')) return 'Escolha para quem é o orçamento.';
+    return '';
+  }
+  next.addEventListener('click', function () { var e = valid(cur); if (e) { msg.className = 'form__msg err'; msg.textContent = e; return; } show(cur + 1); });
+  prev.addEventListener('click', function () { show(cur - 1); });
+  form.querySelectorAll('input[name="divisao"], input[name="perfil"]').forEach(function (r) { r.addEventListener('change', function () { setTimeout(function () { if (cur < 3) show(cur + 1); }, 180); }); });
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var d = { tipo: 'orcamento', divisao: divisao(), perfil: (form.querySelector('input[name="perfil"]:checked') || {}).value, nome: form.nome.value.trim(), whatsapp: form.whatsapp.value, email: form.email.value, cidade: form.cidade.value, consentimento_lgpd: form.consentimento_lgpd.checked, site: form.site.value, detalhes: {} };
+    var dv = form.querySelector('.orc__div[data-div="' + d.divisao + '"]');
+    if (dv) Array.prototype.forEach.call(dv.querySelectorAll('input,select,textarea'), function (el) {
+      if (!el.name) return;
+      if (el.type === 'checkbox') { if (el.checked) (d.detalhes[el.name] = d.detalhes[el.name] || []).push(el.value); }
+      else if (el.type === 'radio') { if (el.checked) d.detalhes[el.name] = el.value; }
+      else if (el.value) d.detalhes[el.name.replace('_transito', '')] = el.value;
+    });
+    if (!d.nome) { msg.className = 'form__msg err'; msg.textContent = 'Informe seu nome.'; return; }
+    if (d.whatsapp.replace(/\D/g, '').length < 10) { msg.className = 'form__msg err'; msg.textContent = 'Informe um WhatsApp com DDD.'; return; }
+    if (!d.consentimento_lgpd) { msg.className = 'form__msg err'; msg.textContent = 'Marque o consentimento para continuar.'; return; }
+    send.disabled = true;
+    window.INSIEL_enviarLead(d).then(function () {
+      if (window.INSIEL_track) INSIEL_track('lead_enviado', { divisao: d.divisao, origem: 'orcamento' });
+      var servicos = (d.detalhes.servicos || []).join(', ');
+      var extra = 'Meu nome é ' + d.nome + '. Pedi orçamento de ' + (nomesDiv[d.divisao] || d.divisao) + (servicos ? ' (' + servicos + ')' : '') + ' pelo site.';
+      document.getElementById('orc-done-nome').textContent = d.nome.split(' ')[0];
+      document.getElementById('orc-done-wa').href = window.INSIEL_waLink(d.divisao, extra);
+      form.hidden = true; document.getElementById('orc-done').hidden = false; window.scrollTo({ top: 0, behavior: 'smooth' });
+    }).catch(function (e) { send.disabled = false; msg.className = 'form__msg err'; msg.textContent = 'Não foi possível enviar agora (' + e.message + '). Tente pelo WhatsApp ou ligue para ' + (window.INSIEL || {}).telefone + '.'; });
+  });
+  // ?divisao=solar pula o passo 1
+  try {
+    var q = new URLSearchParams(location.search).get('divisao');
+    if (q && form.querySelector('input[name="divisao"][value="' + q + '"]')) { form.querySelector('input[name="divisao"][value="' + q + '"]').checked = true; show(2); }
+  } catch (e) { }
+});
+</script>

@@ -274,3 +274,35 @@ strong{font-weight:600;color:var(--ink)}
 .split .step{padding:1rem 1.25rem;display:grid;grid-template-columns:auto 1fr;column-gap:.9rem;align-items:start}
 .split .step::before{margin:0;padding-top:.3rem;grid-row:span 2}
 .split .step h3{margin:0 0 .15rem}
+
+/* timeline: anos de 4 dígitos */
+.tl__n{min-width:44px;width:auto;padding:0 .7rem;border-radius:999px}
+
+/* orçamento em etapas */
+.orc{padding:1.5rem}
+@media (min-width:640px){.orc{padding:2rem 2.25rem}}
+.orc fieldset{border:0;padding:0;margin:0}
+.orc legend{padding:0;width:100%}
+.orc legend h2{font-size:1.5rem;margin-bottom:1rem}
+.orc__prog{height:6px;background:var(--line);border-radius:999px;overflow:hidden}
+.orc__bar{height:100%;background:linear-gradient(90deg,var(--brand-blue),var(--brand-blue-light));transition:width .35s var(--ease)}
+.orc__step-label{font-family:var(--font-title);font-weight:600;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-blue);margin:.75rem 0 1.25rem}
+.opts{display:grid;gap:.75rem;grid-template-columns:1fr}
+@media (min-width:640px){.opts{grid-template-columns:1fr 1fr}}
+.opt{position:relative;display:block}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer}
+.opt span{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:.9rem;align-items:center;padding:1rem 1.1rem;border:1.5px solid var(--line);border-radius:var(--radius);min-height:64px;transition:border-color .2s,background .2s}
+.opt span>svg{grid-row:span 2;width:28px;height:28px;color:var(--brand-blue)}
+.opt strong{font-family:var(--font-title);font-weight:600;color:var(--ink)}
+.opt small{color:var(--graphite);font-size:.85rem}
+.opt input:checked+span{border-color:var(--brand-blue);background:rgba(0,120,181,.07);box-shadow:0 0 0 1px var(--brand-blue) inset}
+.opt input:focus-visible+span{outline:3px solid var(--brand-blue-light)}
+.f-label{font-weight:500;font-size:.92rem;color:var(--ink);margin:0 0 .5rem}
+.orc__nav{display:flex;justify-content:space-between;gap:.75rem;margin-top:1.5rem;flex-wrap:wrap}
+.orc__nav .btn{flex:1 1 160px}
+.orc__done{text-align:center;padding:2.5rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:.75rem}
+.orc__done .ico{width:64px;height:64px;border-radius:50%}
+.orc__done .ico svg{width:32px;height:32px}
+.orc__done .lead{margin-inline:auto}
+.div__body .check{margin:.25rem 0 0}
+.hero--light .kicker{color:var(--brand-blue)}

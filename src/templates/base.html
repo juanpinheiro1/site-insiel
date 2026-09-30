@@ -125,12 +125,12 @@
           <li>{{c.endereco.rua}}<br>{{c.endereco.bairro}}, {{c.endereco.cidade}} – {{c.endereco.uf}}</li>
           <li><a href="tel:{{c.telefone_e164}}">{{c.telefone}}</a></li>
           <li><a href="mailto:{{c.email}}">{{c.email}}</a></li>
-          <li>{{instagram_link}}</li>
+          <li><a data-wa="auto" href="#" target="_blank" rel="noopener">WhatsApp {{c.whatsapp_exibicao}}</a></li>
         </ul>
       </div>
     </div>
     <div class="ftr__bottom">
-      <span>© {{ano}} {{c.razao_social}} · CNPJ {{c.cnpj}}</span>
+      <span>© {{ano}} {{c.razao_social}} · {{c.endereco.cidade}} – {{c.endereco.uf}}</span>
       <span><a href="{{rel}}politica-de-privacidade/">Política de Privacidade</a></span>
     </div>
   </div>

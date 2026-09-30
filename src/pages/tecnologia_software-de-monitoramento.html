@@ -1,16 +1,82 @@
 path: /tecnologia/software-de-monitoramento/
-title: Software de monitoramento de alarmes | Insiel
-description: Software e central de monitoramento para empresas de segurança eletrônica.
+title: Software de monitoramento de alarmes para empresas de segurança | Insiel
+description: Software e central de monitoramento de alarmes desenvolvidos pela Insiel e usados por empresas de segurança eletrônica: recepção de eventos, gestão de clientes e relatórios.
 divisao: tecnologia
-priority: 0.6
+og: og-tecnologia.jpg
+priority: 0.7
 ---
 <section class="hero hero--short">
   <canvas class="hero__net" aria-hidden="true"></canvas>
-  <div class="wrap"><div class="hero__in">
-    <p class="kicker">Em construção · etapa 2</p>
-    <h1>Software de monitoramento para empresas de segurança eletrônica.</h1>
-    <p class="lead">Software e central de monitoramento para empresas de segurança eletrônica.</p>
-    <div class="btn-row"><a class="btn btn--red" href="{{rel}}orcamento/">Agendar demonstração</a><a class="btn btn--outline" data-wa="tecnologia" href="#" target="_blank" rel="noopener">{{icon:whatsapp}} WhatsApp</a></div>
-  </div></div>
+  <div class="wrap">
+    <div class="hero__in">
+      <p class="kicker">Tecnologia · para empresas de segurança eletrônica</p>
+      <h1>Software de monitoramento para quem vive de monitorar.</h1>
+      <p class="lead">Software e central de monitoramento de alarmes desenvolvidos pela Insiel, usados por empresas de segurança eletrônica e na própria central da Insiel, 24 horas por dia.</p>
+      <div class="btn-row">
+        <a class="btn btn--red" href="#demonstracao">Agendar demonstração</a>
+        <a class="btn btn--outline" data-wa="tecnologia" href="#" target="_blank" rel="noopener">{{icon:whatsapp}} WhatsApp</a>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="sec construcao"><div class="wrap"><p class="lead" style="margin-inline:auto">Esta página recebe o conteúdo completo na próxima etapa do projeto.</p></div></section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="split split--rev">
+      <div class="split__media rv">{{img:software-monitoramento.jpg|Monitor com painel de monitoramento de alarmes, mapa e lista de eventos}}</div>
+      <div>
+        <p class="kicker">[PREENCHER nome do produto]</p>
+        <h2>Feito por quem opera uma central.</h2>
+        <p class="lead">O software nasceu da necessidade da própria central de monitoramento da Insiel. Cada função foi testada em operação real antes de chegar a outras empresas.</p>
+        <ul class="check">
+          <li>{{icon:check}}<span><strong>Recepção de eventos</strong> de painéis de alarme e cercas elétricas, com identificação do cliente e do local.</span></li>
+          <li>{{icon:check}}<span><strong>Gestão de clientes</strong>: contatos, procedimentos, horários e histórico de ocorrências.</span></li>
+          <li>{{icon:check}}<span><strong>Relatórios</strong> de eventos, atendimentos e desempenho da operação.</span></li>
+          <li>{{icon:check}}<span>[PREENCHER demais funcionalidades: aplicativo, integrações, receptoras compatíveis]</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--off">
+  <div class="wrap">
+    <p class="kicker">Para o dono da empresa de segurança</p>
+    <h2>O que muda na sua operação.</h2>
+    <div class="grid grid--3 mt-2">
+      <div class="card rv"><span class="ico">{{icon:activity}}</span><h3>Central mais ágil</h3><p>Eventos organizados por prioridade e cliente, procedimentos na tela do operador.</p></div>
+      <div class="card rv"><span class="ico">{{icon:line-chart}}</span><h3>Gestão com números</h3><p>Relatórios para cobrar, renegociar e mostrar ao cliente o que a central fez por ele.</p></div>
+      <div class="card rv"><span class="ico">{{icon:hand-shake}}</span><h3>Suporte de quem entende</h3><p>Suporte de uma empresa que também opera central e conhece a rotina.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="demonstracao">
+  <div class="wrap">
+    <div class="split" style="align-items:start">
+      <div>
+        <p class="kicker">Demonstração</p>
+        <h2>Veja o software funcionando.</h2>
+        <p class="lead">Agende uma demonstração remota com a equipe da Insiel. Mostramos a operação real e tiramos dúvidas sobre migração e compatibilidade.</p>
+      </div>
+      <form class="form rv" data-lead="tecnologia" novalidate>
+        <h3>Agendar demonstração</h3>
+        <input type="hidden" name="tipo" value="orcamento">
+        <input type="hidden" name="divisao" value="tecnologia">
+        <input type="hidden" name="produto" value="software_monitoramento">
+        <input type="hidden" name="perfil" value="empresa">
+        <div class="hp" aria-hidden="true"><label>Não preencha<input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
+        <div class="f-grid f-grid--2">
+          <div class="f"><label for="sw-nome">Seu nome</label><input id="sw-nome" name="nome" type="text" required></div>
+          <div class="f"><label for="sw-org">Empresa</label><input id="sw-org" name="orgao" type="text" required></div>
+          <div class="f"><label for="sw-wa">WhatsApp (com DDD)</label><input id="sw-wa" name="whatsapp" type="tel" inputmode="tel" required></div>
+          <div class="f"><label for="sw-cid">Cidade / estado</label><input id="sw-cid" name="cidade" type="text" required></div>
+          <div class="f f--full"><label for="sw-nec">Situação atual</label><textarea id="sw-nec" name="necessidade" placeholder="Quantos clientes monitorados, software atual, o que precisa melhorar…"></textarea></div>
+          <div class="f f--full"><label class="consent"><input type="checkbox" name="consentimento_lgpd" required><span>Autorizo a Insiel a usar meus dados para retornar este contato, conforme a <a href="{{rel}}politica-de-privacidade/">política de privacidade</a>.</span></label></div>
+        </div>
+        <button class="btn btn--red btn--block mt-2" type="submit">Agendar demonstração</button>
+        <div class="form__msg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>

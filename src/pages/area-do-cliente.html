@@ -1,16 +1,50 @@
 path: /area-do-cliente/
 title: Área do Cliente | Insiel
-description: Solicite atendimento técnico ou fale com o suporte da Insiel.
+description: Cliente Insiel: solicite atendimento técnico ou fale com o suporte pelo WhatsApp.
 divisao: seguranca
-priority: 0.6
+nav: cliente
+priority: 0.5
 ---
-<section class="hero hero--short">
-  <canvas class="hero__net" aria-hidden="true"></canvas>
+<section class="hero hero--light hero--short">
   <div class="wrap"><div class="hero__in">
-    <p class="kicker">Em construção · etapa 2</p>
-    <h1>Área do Cliente.</h1>
-    <p class="lead">Solicite atendimento técnico ou fale com o suporte da Insiel.</p>
-    <div class="btn-row"><a class="btn btn--red" href="{{rel}}orcamento/">Falar com o suporte</a><a class="btn btn--outline" data-wa="seguranca" href="#" target="_blank" rel="noopener">{{icon:whatsapp}} WhatsApp</a></div>
+    <p class="kicker">Área do Cliente</p>
+    <h1>Já é cliente? Estamos aqui.</h1>
+    <p class="lead">Solicite atendimento técnico ou fale direto com o suporte. Em breve, esta área terá acesso ao seu contrato, ocorrências e boletos.</p>
   </div></div>
 </section>
-<section class="sec construcao"><div class="wrap"><p class="lead" style="margin-inline:auto">Esta página recebe o conteúdo completo na próxima etapa do projeto.</p></div></section>
+<section class="sec">
+  <div class="wrap">
+    <div class="split" style="align-items:start">
+      <div>
+        <div class="card rv" style="margin-bottom:1.25rem">
+          <span class="ico">{{icon:whatsapp}}</span>
+          <h3>Falar com o suporte</h3>
+          <p>Para emergências, dúvidas rápidas ou acompanhamento de uma ocorrência, fale com a equipe de segurança pelo WhatsApp.</p>
+          <a class="btn btn--wa" data-wa="seguranca" data-wa-extra="Sou cliente e preciso de suporte." href="#" target="_blank" rel="noopener">{{icon:whatsapp}} WhatsApp do suporte</a>
+        </div>
+        <div class="card rv">
+          <span class="ico">{{icon:phone}}</span>
+          <h3>Central de monitoramento</h3>
+          <p>A central funciona 24 horas. Telefone: <a href="tel:{{c.telefone_e164}}">{{c.telefone}}</a>.</p>
+        </div>
+      </div>
+      <form class="form rv" data-lead="seguranca" novalidate>
+        <h3>Solicitar atendimento técnico</h3>
+        <p class="hint">Descreva o problema. A equipe técnica retorna para agendar.</p>
+        <input type="hidden" name="tipo" value="chamado">
+        <div class="hp" aria-hidden="true"><label>Não preencha<input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
+        <div class="f-grid f-grid--2">
+          <div class="f f--full"><label for="a-nome">Nome do cliente / titular</label><input id="a-nome" name="nome" type="text" required autocomplete="name"></div>
+          <div class="f"><label for="a-wa">WhatsApp (com DDD)</label><input id="a-wa" name="whatsapp" type="tel" inputmode="tel" required autocomplete="tel"></div>
+          <div class="f"><label for="a-cid">Endereço do imóvel (bairro/cidade)</label><input id="a-cid" name="cidade" type="text" required></div>
+          <div class="f f--full"><label for="a-div">Sistema</label>
+            <select id="a-div" name="divisao"><option value="seguranca">Alarme / monitoramento / câmeras / cerca</option><option value="solar">Usina solar</option><option value="transito">Semáforo (município)</option><option value="tecnologia">Equipamento / software</option></select></div>
+          <div class="f f--full"><label for="a-prob">O que está acontecendo?</label><textarea id="a-prob" name="problema" required placeholder="Ex.: o alarme está disparando sem motivo desde ontem…"></textarea></div>
+          <div class="f f--full"><label class="consent"><input type="checkbox" name="consentimento_lgpd" required><span>Autorizo a Insiel a usar meus dados para atender este chamado, conforme a <a href="{{rel}}politica-de-privacidade/">política de privacidade</a>.</span></label></div>
+        </div>
+        <button class="btn btn--red btn--block mt-2" type="submit">Abrir chamado</button>
+        <div class="form__msg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,8 +1,8 @@
 {
-  "_comentario": "Arquivo unico de contatos do site. Numeros de WhatsApp no formato internacional sem sinais (ex.: 5583999990000). Campos vazios = [PREENCHER]; enquanto vazios o botao usa o telefone fixo.",
+  "_comentario": "Arquivo unico de contatos do site. WhatsApp no formato internacional sem sinais. Numero unico (83) 98725-9010 para as 4 divisoes por decisao do usuario (30/09/2026); mudar aqui se cada divisao ganhar numero proprio.",
   "empresa": "Insiel Tecnologia Eletrônica",
-  "razao_social": "[PREENCHER razão social]",
-  "cnpj": "[PREENCHER CNPJ]",
+  "razao_social": "Insiel Tecnologia Eletrônica Ltda.",
+  "cnpj": "",
   "fundacao": "1996",
   "endereco": {
     "rua": "Rua João Florentino de Carvalho, 43",
@@ -18,10 +18,10 @@
   "instagram": "",
   "horario": "[PREENCHER horário de atendimento]",
   "whatsapp": {
-    "seguranca": "",
-    "solar": "",
-    "tecnologia": "",
-    "transito": ""
+    "seguranca": "5583987259010",
+    "solar": "5583987259010",
+    "tecnologia": "5583987259010",
+    "transito": "5583987259010"
   },
   "mensagens_whatsapp": {
     "seguranca": "Olá! Vim pelo site e quero um orçamento de segurança eletrônica.",
@@ -33,5 +33,7 @@
   "ga4_id": "",
   "meta_pixel_id": "",
   "supabase_url": "https://puepmnyffpfjttxmwfjt.supabase.co",
-  "supabase_anon_key": "sb_publishable_adOrRULrgbg_K9EqYHKMdQ_c4NK4Vbe"
+  "supabase_anon_key": "sb_publishable_adOrRULrgbg_K9EqYHKMdQ_c4NK4Vbe",
+  "whatsapp_exibicao": "(83) 98725-9010",
+  "area_atendimento": "Paraíba, Pernambuco e Rio Grande do Norte"
 }

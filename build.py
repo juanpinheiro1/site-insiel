@@ -69,8 +69,9 @@ def render(meta):
                            else '<span class="todo">[PREENCHER Instagram]</span>'),
     }
     out = base
-    for k, v in ctx.items():
-        out = out.replace('{{' + k + '}}', v)
+    for _ in range(2):
+        for k, v in ctx.items():
+            out = out.replace('{{' + k + '}}', v)
     # second pass: body may contain placeholders too
     out = out.replace('{{rel}}', rel)
     out = re.sub(r'\{\{active:(\w+)\}\}', lambda m: 'is-active' if m.group(1) == meta.get('nav', meta.get('divisao')) else '', out)
@@ -89,7 +90,7 @@ def schema_org():
         'telephone': CFG['telefone_e164'], 'email': CFG['email'],
         'address': {'@type': 'PostalAddress', 'streetAddress': e['rua'] + ' – ' + e['bairro'], 'addressLocality': e['cidade'],
                     'addressRegion': e['uf'], 'addressCountry': 'BR'},
-        'areaServed': 'Paraíba, Brasil',
+        'areaServed': CFG.get('area_atendimento','Paraíba, Brasil'),
         'memberOf': {'@type': 'Organization', 'name': 'ABRAPE – Associação Brasileira dos Produtores de Energia Solar'},
     }
 
