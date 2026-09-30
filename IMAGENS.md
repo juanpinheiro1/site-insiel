@@ -1,8 +1,41 @@
 # Imagens do site
 
-Todas as imagens ficam em `docs/images/`. Hoje são **placeholders** (gradiente da marca + nome do arquivo), gerados por `gen_placeholders.py`. Para trocar, basta salvar a imagem real **com o mesmo nome** e proporção; nada muda no código.
+Todas as imagens ficam em `docs/images/`. Em 30/09/2026 os placeholders foram substituídos por **fotos do Pexels** (licença Pexels: uso comercial livre, sem atribuição obrigatória, permitido editar), escolhidas, recortadas e otimizadas pelo script `fotos.py`. Para trocar uma foto por uma real da Insiel, basta salvar o arquivo **com o mesmo nome** em `docs/images/` (o script não sobrescreve arquivos existentes a menos que rode com `--force`).
 
-Regras (do briefing): nenhuma imagem gerada por IA pode ter legenda que a apresente como obra real da Insiel; nada de rostos em close (pessoas de costas, silhueta ou fora de foco); fotografia realista, tons frios com toque de vermelho quando couber, sem texto nem marcas de terceiros. Exportar em JPG qualidade 80–85 (ou WebP) no tamanho indicado.
+Nenhuma legenda no site apresenta essas fotos como instalações da Insiel; os textos alternativos são genéricos. As fotos reais (central de monitoramento, equipe, usinas instaladas, semáforos em operação, bancada) devem substituir as de banco assim que possível: são elas que passam credibilidade.
+
+## Fotos em uso (ID Pexels → https://www.pexels.com/photo/ID/)
+
+| Arquivo | Uso | Pexels ID | Descrição |
+|---|---|---|---|
+| hero-home.jpg | Home, fundo do hero | 35391295 | Campina Grande vista do alto ao anoitecer |
+| divisao-seguranca.jpg | Home, card Segurança | 5213883 | Câmera em fachada de tijolo |
+| divisao-solar.jpg | Home, Solar (ABRAPE), OG Solar | 35105443 | Usina solar em solo, vista aérea |
+| divisao-tecnologia.jpg | Home, card Tecnologia | 36169774 | Placa eletrônica em close, tons escuros |
+| divisao-transito.jpg | Home, Trânsito, OG Trânsito | 34444595 | Semáforo à noite com verde e vermelho |
+| central-monitoramento.jpg | Home, Segurança, OG Segurança | 32529341 | Operador de costas em sala de controle |
+| seg-casa.jpg | Segurança, aba Casa | 4626268 | Casa contemporânea iluminada ao anoitecer |
+| seg-empresa.jpg | Segurança, aba Empresa | 15161977 | Loja iluminada fechada à noite |
+| sub-monitoramento.jpg | /monitoramento-24h | 11783119 | Pessoa de costas diante de painel de câmeras |
+| sub-alarmes.jpg | /alarmes | 1990764 | Teclado de alarme iluminado |
+| sub-incendio.jpg | /alarme-de-incendio | 21782970 | Acionador manual vermelho em parede de concreto |
+| sub-cftv.jpg | /cftv | 29866272 | Câmera dome em parede |
+| sub-acesso.jpg | /controle-de-acesso | 17155842 | Dedo no leitor biométrico |
+| sub-cerca.jpg | /cerca-eletrica | 24880269 | Concertina sobre muro (genérica; trocar por cerca elétrica real) |
+| sub-automacao.jpg | /automacao | 27523128 | Celular e dispositivos de casa inteligente |
+| solar-residencial.jpg | /energia-solar | 38021376 | Painéis em telhado de telha cerâmica |
+| solar-comercial.jpg | /energia-solar | 29923348 | Prédios comerciais com painéis, aérea |
+| solar-industrial.jpg | /energia-solar | 8782730 | Telhado industrial coberto de painéis, drone |
+| solar-instalacao.jpg | /energia-solar, hero | 6961123 | Equipe instalando painéis em telhado grande |
+| tornozeleira.jpg | /tornozeleira-eletronica | 30403062 | Plataforma de localização no celular (não há foto de tornozeleira no banco; trocar pela foto real do produto) |
+| software-monitoramento.jpg | /software-de-monitoramento | 19317897 | Sala de controle com operadores e telão |
+| engenharia.jpg | /tecnologia, /sobre, OG Tecnologia | 37426133 | Técnico soldando placa em laboratório |
+| transito-controlador.jpg | /transito | 21812146 | Eletricista em painel de controle |
+| transito-led.jpg | /transito | 10163240 | Semáforo verde em noite de neblina |
+| sobre-campina.jpg | /sobre, hero | 1579384 | Campina Grande, Açude Velho ao pôr do sol |
+| og-*.jpg | Compartilhamento (1200×630) | composição | Foto da divisão escurecida + logo + título, gerada por `fotos.py` |
+
+## Prompts para gerar versões por IA (opcional, se quiser substituir alguma foto de banco)
 
 | Arquivo | Página | Proporção / tamanho | Prompt de geração (inglês) |
 |---|---|---|---|

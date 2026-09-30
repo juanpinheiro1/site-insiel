@@ -44,7 +44,8 @@ Tudo abaixo aparece como marcador amarelo nas páginas até ser preenchido. Cont
 - [ ] Google Analytics 4 / Meta Pixel
 
 ## Imagens
-- [ ] Trocar os placeholders de `docs/images/` por fotos reais ou geradas (ver IMAGENS.md)
+- [x] Placeholders substituídos por fotos do Pexels em 30/09/2026 (ver IMAGENS.md)
+- [ ] Trocar por fotos reais da Insiel quando houver: central de monitoramento, equipe, usinas, semáforos, tornozeleira (a foto atual é genérica de plataforma de localização) e cerca elétrica (a atual é concertina)
 
 ## Domínio
 - [ ] Apontar insiel.com.br no painel da Central Server (ver README) e ativar o domínio no GitHub Pages
