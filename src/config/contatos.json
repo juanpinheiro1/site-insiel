@@ -1,0 +1,37 @@
+{
+  "_comentario": "Arquivo unico de contatos do site. Numeros de WhatsApp no formato internacional sem sinais (ex.: 5583999990000). Campos vazios = [PREENCHER]; enquanto vazios o botao usa o telefone fixo.",
+  "empresa": "Insiel Tecnologia Eletrônica",
+  "razao_social": "[PREENCHER razão social]",
+  "cnpj": "[PREENCHER CNPJ]",
+  "fundacao": "1996",
+  "endereco": {
+    "rua": "Rua João Florentino de Carvalho, 43",
+    "bairro": "José Pinheiro",
+    "cidade": "Campina Grande",
+    "uf": "PB",
+    "cep": "[PREENCHER CEP]",
+    "maps_embed": "https://www.google.com/maps?q=Rua+Jo%C3%A3o+Florentino+de+Carvalho,+43,+Jos%C3%A9+Pinheiro,+Campina+Grande+-+PB&output=embed"
+  },
+  "telefone": "(83) 3342-0699",
+  "telefone_e164": "+558333420699",
+  "email": "atendimento@insiel.com.br",
+  "instagram": "",
+  "horario": "[PREENCHER horário de atendimento]",
+  "whatsapp": {
+    "seguranca": "",
+    "solar": "",
+    "tecnologia": "",
+    "transito": ""
+  },
+  "mensagens_whatsapp": {
+    "seguranca": "Olá! Vim pelo site e quero um orçamento de segurança eletrônica.",
+    "solar": "Olá! Vim pelo site e quero um orçamento de energia solar.",
+    "tecnologia": "Olá! Vim pelo site e quero falar sobre equipamentos/software.",
+    "transito": "Olá! Vim pelo site e quero falar sobre controle semafórico."
+  },
+  "site_url": "https://insiel.com.br",
+  "ga4_id": "",
+  "meta_pixel_id": "",
+  "supabase_url": "https://puepmnyffpfjttxmwfjt.supabase.co",
+  "supabase_anon_key": "sb_publishable_adOrRULrgbg_K9EqYHKMdQ_c4NK4Vbe"
+}

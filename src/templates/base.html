@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{canonical}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Insiel Tecnologia Eletrônica">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{og_image}}">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A1A2A">
+<link rel="icon" href="{{rel}}favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="{{rel}}img/favicon-32.png">
+<link rel="apple-touch-icon" href="{{rel}}img/apple-touch-icon.png">
+<link rel="manifest" href="{{rel}}manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Sora:wght@600;700&display=swap">
+<link rel="stylesheet" href="{{rel}}css/site.css?v={{build}}">
+<script type="application/ld+json">{{schema_org}}</script>
+{{schema_page}}
+{{analytics}}
+</head>
+<body data-divisao="{{divisao}}">
+<a class="sr-only" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="logo" href="{{rel}}" aria-label="Insiel Tecnologia Eletrônica — início">
+      <img src="{{rel}}img/logo-horizontal.png" width="576" height="160" alt="Insiel Tecnologia Eletrônica">
+    </a>
+    <nav aria-label="Principal">
+      <ul class="nav">
+        <li>
+          <button type="button" aria-haspopup="true" aria-expanded="false" class="{{active:seguranca}}">Segurança {{icon:chevron-down}}</button>
+          <div class="sub">
+            <a href="{{rel}}seguranca-eletronica/"><strong>Segurança Eletrônica</strong></a>
+            <a href="{{rel}}seguranca-eletronica/monitoramento-24h/">Monitoramento 24h</a>
+            <a href="{{rel}}seguranca-eletronica/alarmes/">Alarmes</a>
+            <a href="{{rel}}seguranca-eletronica/alarme-de-incendio/">Alarme de Incêndio</a>
+            <a href="{{rel}}seguranca-eletronica/cftv/">CFTV (câmeras)</a>
+            <a href="{{rel}}seguranca-eletronica/controle-de-acesso/">Controle de Acesso</a>
+            <a href="{{rel}}seguranca-eletronica/cerca-eletrica/">Cerca Elétrica</a>
+            <a href="{{rel}}seguranca-eletronica/automacao/">Automação</a>
+          </div>
+        </li>
+        <li><a href="{{rel}}energia-solar/" class="{{active:solar}}">Energia Solar</a></li>
+        <li><a href="{{rel}}tecnologia/" class="{{active:tecnologia}}">Tecnologia</a></li>
+        <li><a href="{{rel}}transito/" class="{{active:transito}}">Trânsito</a></li>
+        <li><a href="{{rel}}sobre/" class="{{active:sobre}}">Sobre</a></li>
+        <li><a href="{{rel}}contato/" class="{{active:contato}}">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="hdr__cta">
+      <a class="link-quiet" href="{{rel}}area-do-cliente/">Área do Cliente</a>
+      <a class="btn btn--red" href="{{rel}}orcamento/">Pedir orçamento</a>
+    </div>
+    <div class="hdr__cta-mobile">
+      <a class="btn btn--red" href="{{rel}}orcamento/">Pedir orçamento</a>
+      <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">{{icon:menu}}</button>
+    </div>
+  </div>
+  <div class="mnav" id="menu-mobile">
+    <div class="mnav__group">Segurança Eletrônica</div>
+    <div class="mnav__sub">
+      <a href="{{rel}}seguranca-eletronica/">Visão geral</a>
+      <a href="{{rel}}seguranca-eletronica/monitoramento-24h/">Monitoramento 24h</a>
+      <a href="{{rel}}seguranca-eletronica/alarmes/">Alarmes</a>
+      <a href="{{rel}}seguranca-eletronica/alarme-de-incendio/">Alarme de Incêndio</a>
+      <a href="{{rel}}seguranca-eletronica/cftv/">CFTV (câmeras)</a>
+      <a href="{{rel}}seguranca-eletronica/controle-de-acesso/">Controle de Acesso</a>
+      <a href="{{rel}}seguranca-eletronica/cerca-eletrica/">Cerca Elétrica</a>
+      <a href="{{rel}}seguranca-eletronica/automacao/">Automação</a>
+    </div>
+    <a href="{{rel}}energia-solar/">Energia Solar</a>
+    <a href="{{rel}}tecnologia/">Tecnologia</a>
+    <a href="{{rel}}transito/">Trânsito</a>
+    <a href="{{rel}}sobre/">Sobre</a>
+    <a href="{{rel}}contato/">Contato</a>
+    <a href="{{rel}}area-do-cliente/">Área do Cliente</a>
+    <a class="btn btn--red btn--block" href="{{rel}}orcamento/">Pedir orçamento</a>
+  </div>
+</header>
+
+<main id="conteudo">
+{{body}}
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div class="ftr__brand">
+        <img src="{{rel}}img/logo-horizontal.png" width="576" height="160" alt="Insiel" loading="lazy">
+        <p>Tecnologia eletrônica desde 1996.</p>
+        <div class="abrape-line">{{icon:sun}}<span>Associada à ABRAPE – Associação Brasileira dos Produtores de Energia Solar.</span></div>
+      </div>
+      <div>
+        <h4>Divisões</h4>
+        <ul>
+          <li><a href="{{rel}}seguranca-eletronica/">Segurança Eletrônica</a></li>
+          <li><a href="{{rel}}energia-solar/">Energia Solar</a></li>
+          <li><a href="{{rel}}tecnologia/">Equipamentos e Software</a></li>
+          <li><a href="{{rel}}transito/">Controle Semafórico</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="{{rel}}sobre/">Sobre a Insiel</a></li>
+          <li><a href="{{rel}}orcamento/">Pedir orçamento</a></li>
+          <li><a href="{{rel}}area-do-cliente/">Área do Cliente</a></li>
+          <li><a href="{{rel}}contato/">Contato</a></li>
+          <li><a href="{{rel}}politica-de-privacidade/">Política de Privacidade</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>{{c.endereco.rua}}<br>{{c.endereco.bairro}}, {{c.endereco.cidade}} – {{c.endereco.uf}}</li>
+          <li><a href="tel:{{c.telefone_e164}}">{{c.telefone}}</a></li>
+          <li><a href="mailto:{{c.email}}">{{c.email}}</a></li>
+          <li>{{instagram_link}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__bottom">
+      <span>© {{ano}} {{c.razao_social}} · CNPJ {{c.cnpj}}</span>
+      <span><a href="{{rel}}politica-de-privacidade/">Política de Privacidade</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa="auto" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">{{icon:whatsapp}}<span>WhatsApp</span></a>
+
+<div class="cookie" role="dialog" aria-label="Aviso de cookies">
+  <p>Usamos cookies para medir o uso do site e melhorar o atendimento. Veja a <a href="{{rel}}politica-de-privacidade/">política de privacidade</a>.</p>
+  <button class="btn btn--outline" type="button">Entendi</button>
+</div>
+
+<script>window.INSIEL={{config_js}};</script>
+<script src="{{rel}}js/site.js?v={{build}}" defer></script>
+</body>
+</html>
