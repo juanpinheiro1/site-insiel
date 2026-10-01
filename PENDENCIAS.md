@@ -48,4 +48,5 @@ Tudo abaixo aparece como marcador amarelo nas páginas até ser preenchido. Cont
 - [ ] Trocar por fotos reais da Insiel quando houver: central de monitoramento, equipe, usinas, semáforos, tornozeleira (a foto atual é genérica de plataforma de localização) e cerca elétrica (a atual é concertina)
 
 ## Domínio
-- [ ] Apontar insiel.com.br no painel da Central Server (ver README) e ativar o domínio no GitHub Pages
+- [x] 30/09/2026: zona migrada para o DNS do Registro.br (modo avançado, 17 registros, e-mail preservado); insiel.com.br e mesa.insiel.com.br apontados ao GitHub Pages
+- [ ] Conferir se o HTTPS forçado ficou ativo nos dois repositórios depois da emissão do certificado (Settings → Pages)

@@ -36,7 +36,7 @@ Placeholders disponíveis nas páginas: `{{rel}}` (caminho relativo até a raiz)
 
 ## Domínio insiel.com.br
 
-A zona DNS está na **Central Server** (NS dns1–4.insiel.com.br), não no Registro.br. Para publicar, no painel de DNS da Central Server:
+ATUALIZAÇÃO 30/09/2026: a zona passou para o **DNS do Registro.br** (modo avançado; servidores d/e.sec.dns.br). Os registros abaixo já estão lá, junto com `mesa CNAME juanpinheiro1.github.io`. Qualquer novo registro é feito em registro.br → painel → insiel.com.br → Configurar zona DNS. Registros do site:
 
 | Tipo | Nome | Valor |
 |---|---|---|
