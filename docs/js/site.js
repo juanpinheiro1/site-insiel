@@ -97,7 +97,7 @@
     var num = (C.whatsapp || {})[div] || '';
     var msg = (C.mensagens || {})[div] || 'Olá! Vim pelo site da Insiel.';
     if (extra) msg += ' ' + extra;
-    if (!num) return C.telefone_e164 ? 'tel:' + C.telefone_e164 : '#contato';
+    if (!num) return C.telefone_e164 ? 'tel:' + C.telefone_e164 : 'fale-conosco/';
     return 'https://wa.me/' + num + '?text=' + encodeURIComponent(msg);
   }
   window.INSIEL_waLink = waLink;

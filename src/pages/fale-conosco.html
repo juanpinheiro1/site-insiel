@@ -1,0 +1,75 @@
+path: /fale-conosco/
+title: Fale Conosco | Insiel Tecnologia Eletrônica, Campina Grande
+description: Fale com a Insiel em Campina Grande (PB): telefone (83) 3342-0699, WhatsApp, e-mail atendimento@insiel.com.br e endereço. Visitantes tiram dúvidas e pedem orçamento; clientes solicitam atendimento técnico.
+divisao: seguranca
+nav: fale
+priority: 0.8
+---
+<section class="hero hero--light hero--short">
+  <div class="wrap">
+    <div class="hero__in">
+      <p class="kicker">Fale Conosco</p>
+      <h1>Visitante ou cliente, é por aqui.</h1>
+      <p class="lead">Dúvidas, pedidos de orçamento e atendimento técnico para quem já é cliente. Atendemos Campina Grande e toda a {{c.area_atendimento}}. A central de monitoramento funciona 24 horas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="split" style="align-items:start">
+      <div>
+        <div class="grid grid--2">
+          <div class="feat rv"><span class="ico">{{icon:map-pin}}</span><div><h3>Endereço</h3><p>{{c.endereco.rua}}<br>{{c.endereco.bairro}}, {{c.endereco.cidade}} – {{c.endereco.uf}}</p></div></div>
+          <div class="feat rv"><span class="ico">{{icon:phone}}</span><div><h3>Telefone</h3><p><a href="tel:{{c.telefone_e164}}">{{c.telefone}}</a><br><small>Central de monitoramento: 24 horas</small></p></div></div>
+          <div class="feat rv"><span class="ico">{{icon:mail}}</span><div><h3>E-mail</h3><p><a href="mailto:{{c.email}}">{{c.email}}</a></p></div></div>
+          <div class="feat rv"><span class="ico">{{icon:clock}}</span><div><h3>Horário</h3><p>[PREENCHER horário de atendimento]</p></div></div>
+        </div>
+        <h3 class="mt-3">WhatsApp por divisão</h3>
+        <div class="btn-row">
+          <a class="btn btn--wa" data-wa="seguranca" href="#" target="_blank" rel="noopener">{{icon:whatsapp}} Segurança</a>
+          <a class="btn btn--wa" data-wa="solar" href="#" target="_blank" rel="noopener">{{icon:whatsapp}} Energia Solar</a>
+          <a class="btn btn--wa" data-wa="tecnologia" href="#" target="_blank" rel="noopener">{{icon:whatsapp}} Tecnologia</a>
+          <a class="btn btn--wa" data-wa="transito" href="#" target="_blank" rel="noopener">{{icon:whatsapp}} Trânsito</a>
+        </div>
+        <h3 class="mt-3">Já é cliente?</h3>
+        <p>Para emergências ou acompanhamento de uma ocorrência, fale direto com o suporte. Para visita técnica, use o formulário ao lado escolhendo "Sou cliente".</p>
+        <a class="btn btn--wa" data-wa="seguranca" data-wa-extra="Sou cliente e preciso de suporte." href="#" target="_blank" rel="noopener">{{icon:whatsapp}} WhatsApp do suporte</a>
+        <div class="split__media mt-3 rv" style="aspect-ratio:16/10">
+          <iframe title="Mapa: Insiel em Campina Grande" src="{{c.endereco.maps_embed}}" width="100%" height="100%" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+      <form class="form rv" data-lead="seguranca" novalidate id="form-fale">
+        <h3>Envie sua mensagem</h3>
+        <p class="hint">Para orçamentos, o <a href="{{rel}}orcamento/">formulário de orçamento</a> é mais rápido.</p>
+        <input type="hidden" name="tipo" id="fc-tipo" value="contato">
+        <div class="hp" aria-hidden="true"><label>Não preencha<input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
+        <div class="f-grid f-grid--2">
+          <div class="f f--full"><span style="font-weight:500;font-size:.92rem;color:var(--ink)">Você é</span>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="quem" value="visitante" checked onchange="fcQuem()"><span>Visitante</span></label>
+              <label class="chip"><input type="radio" name="quem" value="cliente" onchange="fcQuem()"><span>Sou cliente</span></label>
+            </div></div>
+          <div class="f f--full"><label for="c-nome">Seu nome</label><input id="c-nome" name="nome" type="text" required autocomplete="name"></div>
+          <div class="f"><label for="c-wa">WhatsApp (com DDD)</label><input id="c-wa" name="whatsapp" type="tel" inputmode="tel" required autocomplete="tel"></div>
+          <div class="f"><label for="c-email">E-mail</label><input id="c-email" name="email" type="email" autocomplete="email"></div>
+          <div class="f f--full" id="fc-end-w" hidden><label for="c-end">Endereço do imóvel (bairro/cidade)</label><input id="c-end" name="cidade" type="text"></div>
+          <div class="f f--full"><label for="c-div">Assunto</label>
+            <select id="c-div" name="divisao"><option value="seguranca">Segurança eletrônica</option><option value="solar">Energia solar</option><option value="tecnologia">Equipamentos / software</option><option value="transito">Trânsito</option></select></div>
+          <div class="f f--full"><label for="c-msg" id="fc-msg-l">Mensagem</label><textarea id="c-msg" name="mensagem" required></textarea></div>
+          <div class="f f--full"><label class="consent"><input type="checkbox" name="consentimento_lgpd" required><span>Autorizo a Insiel a usar meus dados para responder esta mensagem, conforme a <a href="{{rel}}politica-de-privacidade/">política de privacidade</a>.</span></label></div>
+        </div>
+        <button class="btn btn--red btn--block mt-2" type="submit" id="fc-btn">Enviar mensagem</button>
+        <div class="form__msg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+<script>
+function fcQuem(){var cli=document.querySelector('input[name="quem"][value="cliente"]').checked;
+  document.getElementById('fc-tipo').value=cli?'chamado':'contato';
+  document.getElementById('fc-end-w').hidden=!cli;
+  document.getElementById('fc-msg-l').textContent=cli?'O que está acontecendo?':'Mensagem';
+  document.getElementById('c-msg').name=cli?'problema':'mensagem';
+  document.getElementById('fc-btn').textContent=cli?'Solicitar atendimento técnico':'Enviar mensagem';}
+</script>
